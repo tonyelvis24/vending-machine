@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import PedidoState from '../context/shop/PedidoState'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const MyApp = ({ Component, pageProps}) => {
+    return(
+       
+            <PedidoState>
+                <Component {...pageProps} />
+            </PedidoState>
+       
+    )
 }
 
-export default MyApp
+export default MyApp;
